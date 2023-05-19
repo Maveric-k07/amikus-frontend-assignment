@@ -39,7 +39,7 @@ function SignUp({ setActive }) {
       return;
     }
     try {
-      await axios.post("/auth/register", state);
+      await axios.post("https://amikus-backend-assignment.onrender.com/api/auth/register", state);
       setError(null);
       setActive(true);
     } catch (e) {

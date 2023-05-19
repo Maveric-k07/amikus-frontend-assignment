@@ -23,7 +23,7 @@ function LeftModal() {
       description: value,
     };
     try {
-      await axios.put(`/todo/${newTask._id}`, {
+      await axios.put(`https://amikus-backend-assignment.onrender.com/api/todo/${newTask._id}`, {
         src: newTask.src,
         description: newTask.description,
         username: newTask.username,
@@ -38,9 +38,8 @@ function LeftModal() {
   };
   return (
     <div
-      className={`${
-        modalOpen ? "flex translate-x-0" : "hidden translate-x-7"
-      } bg-white absolute right-0 top-[150px] h-[80%] p-4 shadow-lg  w-[60%] z-20 flex-col `}
+      className={`${modalOpen ? "flex translate-x-0" : "hidden translate-x-7"
+        } bg-white absolute right-0 top-[150px] h-[80%] p-4 shadow-lg  w-[60%] z-20 flex-col `}
     >
       <div className="mb-4">
         <h1 className="font-semibold">{title}</h1>

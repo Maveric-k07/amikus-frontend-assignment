@@ -22,8 +22,8 @@ function SignIn() {
       password: password.current.value,
     };
     try {
-      const res = await axios.post("/auth/login", config);
-      const tasks = await axios.get("/todo");
+      const res = await axios.post("https://amikus-backend-assignment.onrender.com/api/auth/login", config);
+      const tasks = await axios.get("https://amikus-backend-assignment.onrender.com/api/todo");
       const data = {
         user: res.data,
         isFetching: false,
